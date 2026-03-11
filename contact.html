@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatteLab - Kontakt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></head>
+<body>
+  <header class="site-header">
+    <div class="container row">
+      <a class="logo" href="index.html">Matte<span>Lab</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Meny">☰</button>
+      <nav class="nav">
+        <a href="index.html">index</a>
+        <a href="matte.html">Matte</a>
+        <a href="norsk.html">Norsk</a>
+        <a href="about.html">Om</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="tag">Ta kontakt</p>
+        <h1>Kontakt og tilbakemelding</h1>
+        <p>Send oss gjerne spørsmål, ideer eller feilrapport.</p>
+        <p><strong>E-post:</strong> kilwe501@hotmail.com<br>
+           <strong>Tlf:</strong> 40097347</p>
+      </div>
+      <div class="hero-card">
+        <h2>Send e-post</h2>
+        <form action="mailto:kilwe501@hotmail.com" method="post" enctype="text/plain" class="control-grid">
+          <label for="cName">Navn</label>
+          <input id="cName" name="navn" placeholder="Ditt navn" required>
+          <label for="cEmail">E-post</label>
+          <input id="cEmail" name="epost" type="email" placeholder="din@epost.no" required>
+          <label for="cMsg">Melding</label>
+          <textarea id="cMsg" name="melding" rows="4" placeholder="Skriv meldingen din" required></textarea>
+          <button class="btn primary" type="submit">Send tilbakemelding</button>
+        </form>
+        <p style="margin-top:10px;"><a class="btn" href="mailto:kilwe501@hotmail.com?subject=tilbakemelding">Eller send tilbakemelding direkte pa e‑post</a></p>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <p class="footer-brand">MatteLab</p>
+        <p class="footer-rights">© 2026 MatteLab. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="matte.html">Matte</a>
+        <a href="norsk.html">Norsk</a>
+        <a href="about.html">Om</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:+4740097347"><i class="fas fa-phone"></i> +47 400 97 347</a>
+        <a href="mailto:kilwe501@hotmail.com"><i class="fas fa-envelope"></i> kilwe501@hotmail.com</a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
+    </div>
+  </footer>
+  <script src="nav.js"></script>`n</body>
+</html>
+
+
+
+
+

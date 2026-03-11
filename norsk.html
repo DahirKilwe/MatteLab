@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatteLab - Norsk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">`</head>
+<body>
+  <header class="site-header">
+    <div class="container row">
+      <a class="logo" href="index.html">Matte<span>Lab</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Meny">☰</button>
+      <nav class="nav">
+        <a href="index.html">index</a>
+        <a href="matte.html">Matte</a>
+        <a href="norsk.html">Norsk</a>
+        <a href="about.html">Om</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-norsk container">
+      <div class="hero-text">
+        <p class="tag">Lyd og ord</p>
+        <h1>Norsk oppgaver for barn</h1>
+        <p>Ord, setninger, preposisjoner og tall med lydstøtte og mange oppgaver (opptil 500).</p>
+      </div>
+      <div class="hero-side">
+        <div class="hero-cover" aria-hidden="true"></div>
+        <div class="hero-card">
+          <h2>Velg norsk-oppsett</h2>
+          <div class="control-grid">
+            <label for="nCategorySelect">Kategori</label>
+            <select id="nCategorySelect">
+              <option value="ord">Ord</option>
+              <option value="setning" selected>Setning</option>
+              <option value="preposisjon">Preposisjon</option>
+              <option value="tall">Tall</option>
+            </select>
+            <label for="nCountSelect">Antall oppgaver</label>
+            <select id="nCountSelect">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+              <option>100</option>
+              <option>200</option>
+              <option>300</option>
+              <option selected>500</option>
+            </select>
+          </div>
+          <button id="nStartBtn" class="btn primary" type="button">Start norsk</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section-head">
+        <h2>Norsk med lyd</h2>
+        <p class="hint">Trykk spill av for å høre ordene.</p>
+      </div>
+      <div class="lang-grid">
+        <article class="lang-card"><p class="label">Ord</p><h3>Hverdagsord</h3><p class="example">sol, bok, venn, skole</p><button class="btn small speak-btn" data-say="sol, bok, venn, skole">Spill av ord</button></article>
+        <article class="lang-card"><p class="label">Setning</p><h3>Korte setninger</h3><p class="example">Jeg liker a lese boker.</p><p class="example">Vi gar til skolen.</p><button class="btn small speak-btn" data-say="Jeg liker a lese boker. Vi gar til skolen.">Spill av setninger</button></article>
+        <article class="lang-card"><p class="label">Preposisjon</p><h3>Hvor er noe?</h3><p class="example">Katten sitter under bordet.</p><p class="example">Boken ligger pa bordet.</p><button class="btn small speak-btn" data-say="Katten sitter under bordet. Boken ligger pa bordet.">Spill av preposisjoner</button></article>
+        <article class="lang-card"><p class="label">Tall</p><h3>Si tall</h3><p class="example">22 = tjueto</p><p class="example">107 = hundre og sju</p><button class="btn small speak-btn" data-say="tjueto. hundre og sju.">Spill av tall</button></article>
+      </div>
+    </section>
+
+    <section id="norsk-ovelser" class="container section">
+      <div class="section-head">
+        <h2>Norsk oppgaver</h2>
+        <p class="hint">Svar selv, spill av lyd, og se fasit.</p>
+      </div>
+      <div class="dual-grid">
+        <article class="question-card">
+          <div class="status-row">
+            <div><p class="label">Oppgave</p><p id="nProgressText" class="value">0 / 0</p></div>
+            <div><p class="label">Poeng</p><p id="nScoreText" class="value">0</p></div>
+            <div><p class="label">Lyd</p><button id="nPlayBtn" class="btn small" type="button">Spill av</button></div>
+          </div>
+          <h2 id="nQuestionText">Trykk start</h2>
+          <p id="nHint" class="hint"></p>
+          <div class="answer-row">
+            <input id="nAnswerInput" type="text" placeholder="Skriv svaret ditt">
+            <button id="nSubmitBtn" class="btn primary" type="button">Sjekk svar</button>
+            <button id="nSkipBtn" class="btn" type="button">Hopp over</button>
+            <button id="nNextBtn" class="btn" type="button" disabled>Neste</button>
+          </div>
+          <p id="nFeedback" class="feedback" aria-live="polite"></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <p class="footer-brand">MatteLab</p>
+        <p class="footer-rights">© 2026 MatteLab. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="matte.html">Matte</a>
+        <a href="norsk.html">Norsk</a>
+        <a href="about.html">Om</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:+4740097347"><i class="fas fa-phone"></i> +47 400 97 347</a>
+        <a href="mailto:kilwe501@hotmail.com"><i class="fas fa-envelope"></i> kilwe501@hotmail.com</a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script-norsk.js"></script>
+  <script src="nav.js"></script>`n</body>
+</html>
+
+
+
+
+
+
